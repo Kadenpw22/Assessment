@@ -6,3 +6,16 @@ A function may also need to format and/or structure a response e.g. return a lis
 Any errors or invalid inputs should be handled appropriately.
 Please note that you do not need to read the data file or perform any other such processing in this module.
 """
+
+choice = input("Please enter the letter that corresponds with your desired menu choice")
+print("[A] View Data")
+print("[B] Visualise Data")
+print("[X] Exit")
+if choice == "A":
+    print("You have chosen option A - View Data")
+elif choice == "B":
+    print("You have chosen option B - Visualise Data")
+elif choice == "X":
+    print("You have chosen option X - Exit")
+else:
+    print("That is an invalid menu choice. Try again.")

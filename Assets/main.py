@@ -12,6 +12,6 @@ print("--------------------------")
 print("Disneyland Review Analyser")
 print("--------------------------")
 
+import process
 import tui
 import visual
-import process

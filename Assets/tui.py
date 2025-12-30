@@ -13,8 +13,16 @@ while True:
     choice = input("Please enter the letter that corresponds with your desired menu choice")
     if choice == "A":
         print("You have chosen option A - View Data")
+        print("[A] View Reviews by Park")
+        print("[B] Number of Reviews by Park and Reviewer location")
+        print("[C] Average score per year by park")
+        print("[D] Average score per park by reviewer location")
+        print("Please enter one of the options")
     elif choice == "B":
         print("You have chosen option B - Visualise Data")
+        print("[A] Most reviewed parks")
+        print("[B] Park rank by nationality")
+        print("[C] Most popular month by park")
     elif choice == "X":
         print("You have chosen option X - Exit")
         break

@@ -29,3 +29,10 @@ def visualise_menu():
     choice = input("Enter the letter that corresponds with your desired menu choice: ")
     print(f"You entered: {choice}")
     return choice
+def park_choice(parks):
+    choice = input("Choose which park you would like to see a review of ")
+    return choice
+def display_rows(rows, limit):
+    if len(rows) == 0:
+        print("No reviews found")
+        return

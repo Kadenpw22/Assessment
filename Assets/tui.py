@@ -14,3 +14,18 @@ def main_menu():
     choice = input("Enter the letter that corresponds with your desired menu choice: ")
     print(f"You entered: {choice}")
     return choice
+def view_data_menu():
+    print("[A] View Reviews by park")
+    print("[B] Number of reviews by park and reviewer location")
+    print("[C] Average score per year by park")
+    print("[D] Average score per park by reviewer location")
+    choice = input("Enter the letter that corresponds with your desired menu choice: ")
+    print(f"You entered: {choice}")
+    return choice
+def visualise_menu():
+    print("[A] Most reviewed parks")
+    print("[B] Park ranking by nationality")
+    print("[C] Most popular month by park")
+    choice = input("Enter the letter that corresponds with your desired menu choice: ")
+    print(f"You entered: {choice}")
+    return choice

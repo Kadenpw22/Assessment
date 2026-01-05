@@ -3,7 +3,7 @@ This module is responsible for processing the data.  It will largely contain fun
 perfrom necessary processes in order to provide the desired result in the desired format.
 It is likely that most sections will require functions to be placed in this module.
 """
-
+import tui
 import csv
 
 with open("disneyland_reviews.csv", newline='') as file:
@@ -12,3 +12,7 @@ with open("disneyland_reviews.csv", newline='') as file:
 row_count = len(rows)
 print("Number of rows: ", row_count)
 
+def get_unique_parks(data):
+    return sorted({row["Branch"] for row in data})
+def filter_by_park(data, park):
+    return [row for row in data if row["Branch"] == park]

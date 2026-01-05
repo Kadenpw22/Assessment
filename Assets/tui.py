@@ -36,3 +36,13 @@ def display_rows(rows, limit):
     if len(rows) == 0:
         print("No reviews found")
         return
+    show = []
+    if limit is None:
+        for row in rows:
+            show.append(row)
+    else:
+        count = 0
+        for row in rows:
+            if count < limit:
+                show.append(row)
+                count += 1

@@ -8,6 +8,17 @@ from collections import defaultdict
 import tui
 import csv
 
+def load_dataset(file_path):
+    data = []
+    with open("disneyland_reviews.csv", newline='') as file:
+        reader = csv.reader(file)
+        rows = list(reader)
+    row_count = len(rows)
+    print("Number of rows: ", row_count)
+    for row in reader:
+        data.append(row)
+    return data
+
 def park_names(data):
     parks = []
     for row in data:

@@ -17,29 +17,20 @@ import tui
 import visual
 import csv
 
-def load_dataset(file_path):
-    data = []
-    with open("disneyland_reviews.csv", newline='') as file:
-        reader = csv.reader(file)
-        rows = list(reader)
-    row_count = len(rows)
-    print("Number of rows: ", row_count)
-    for row in reader:
-        data.append(row)
-    return data
+
 def view(data):
     parks = process.park_names(data)
     while True:
         choice = tui.view_data_menu()
         if choice == "A":
-            tui.park_choice()
+            tui.park_choice(parks)
             rows = process.choose_name(data, park)
-            tui.display_rows(rows)
-def run():
-    park_data = load_dataset("disneyland_reviews.csv")
-    while True:
-        choice = tui.main_menu()
-        if choice == "A":
+            tui.display_rows(rows, limit = 50)
+# def run():
+#     park_data = process.load_dataset("disneyland_reviews.csv")
+#     while True:
+#         choice = tui.main_menu()
+#         if choice == "A":
 
 
 

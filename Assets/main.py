@@ -7,30 +7,63 @@ Note:   any user input/output should be done in the module 'tui'
         any processing should be done in the module 'process'
         any visualisation should be done in the module 'visual'
 """
-
-print("--------------------------")
-print("Disneyland Review Analyser")
-print("--------------------------")
-
 import process
 import tui
 import visual
 import csv
 
+print("--------------------------")
+print("Disneyland Review Analyser")
+print("--------------------------")
 
-def view(data):
-    parks = process.park_names(data)
+def display_view_data_menu(data):
     while True:
-        choice = tui.view_data_menu()
-        if choice == "A":
-            tui.park_choice(parks)
-            rows = process.choose_name(data, park)
-            tui.display_rows(rows, limit = 50)
-# def run():
-#     park_data = process.load_dataset("disneyland_reviews.csv")
-#     while True:
-#         choice = tui.main_menu()
-#         if choice == "A":
+        option = tui.view_data_menu()
+        if option == "A":
+            break
+        elif option == "B":
+            break
+        elif option == "C":
+            break
+        elif option == "D":
+            break
+        elif option == "X":
+            return
+        else:
+            print("Invalid option")
+def display_visualise_menu(data):
+    while True:
+        option = tui.visualise_menu()
+        if option == "A":
+            break
+        elif option == "B":
+            break
+        elif option == "C":
+            break
+        elif option == "X":
+            return
+        else:
+            print("Invalid option")
+def run():
+    data = process.load_dataset("disneyland_reviews.csv")
+    tui.display_dataset(len(data))
+    while True:
+        option = tui.main_menu()
+        if option == "A":
+            display_view_data_menu(data)
+        elif option == "B":
+            display_visualise_menu(data)
+        elif option == "X":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option")
+if __name__ == "__main__":
+    run()
+
+
+
+
 
 
 

@@ -7,6 +7,9 @@ Any errors or invalid inputs should be handled appropriately.
 Please note that you do not need to read the data file or perform any other such processing in this module.
 """
 import process
+def display_dataset(count_rows):
+    print(f"Dataset read ")
+    print(f"rows in dataset: {count_rows} ")
 def main_menu():
     print("[A] View Data")
     print("[B] Visualise Data")
@@ -29,20 +32,12 @@ def visualise_menu():
     choice = input("Enter the letter that corresponds with your desired menu choice: ")
     print(f"You entered: {choice}")
     return choice
-def park_choice(parks):
-    choice = input("Choose which park you would like to see a review of ")
-    return choice
-def display_rows(rows, limit):
-    if len(rows) == 0:
-        print("No reviews found")
-        return
-    show = []
-    if limit is None:
-        for row in rows:
-            show.append(row)
-    else:
-        count = 0
-        for row in rows:
-            if count < limit:
-                show.append(row)
-                count += 1
+def park_choice(park):
+    parks = input("Choose which park you would like to see a review of ")
+    return parks
+def ask_location():
+    location = input("Enter the location of the review ")
+    return location
+def ask_year():
+    year = input("Enter the year of the review ")
+    return year
